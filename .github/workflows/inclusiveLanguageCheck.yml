@@ -23,11 +23,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-        
       - name: Inclusiveness Analyzer
-        uses: microsoft/InclusivenessAnalyzer@v0.1.7-beta
-        with:
-          # Fails the step if a non-inclusive term is found
-          failStep: true
-          # Only scan files added or modified in last commit when checkout step has "with: fetch-depth: 2" configured
-          excludeUnchangedFiles: false
+        uses: microsoft/InclusivenessAnalyzer@v1.0.0
+      
